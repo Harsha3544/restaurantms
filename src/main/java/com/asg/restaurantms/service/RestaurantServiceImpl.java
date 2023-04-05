@@ -35,7 +35,7 @@ public class RestaurantServiceImpl implements RestaurantService {
 		
 		Optional<User> optionalUser = userDao.findByUserName(userName);
 		
-		if(!optionalUser.isPresent() || !optionalUser.get().isAdmin() ) {
+		if(!optionalUser.isPresent() && !optionalUser.get().isAdmin() ) {
 			return "access denied";
 		}
 		

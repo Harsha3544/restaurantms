@@ -33,7 +33,7 @@ public class User {
 	@Size(min=7,max=15,message="message=\"Password must be equal to or greater than 7 characters and less than 15 ")
 	private String password;
 	
-	private boolean isAdmin;
+	private boolean isAdmin=false;
 	
 	public boolean isAdmin() {
 		return isAdmin;
